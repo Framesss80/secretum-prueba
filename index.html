@@ -14,7 +14,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@400;500;600&family=Kalam:wght@400;700&display=swap" rel="stylesheet">
     
     <!-- CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -32,11 +32,19 @@
                     fontFamily: {
                         serif: ['Cormorant Garamond', 'serif'],
                         sans: ['Inter', 'sans-serif'],
+                        hand: ['Kalam', 'cursive'],
                     }
                 }
             }
         }
     </script>
+    <style>
+        .dot-pattern {
+            background-image: radial-gradient(#0A0A0A 1.5px, transparent 1.5px);
+            background-size: 24px 24px;
+            background-repeat: repeat;
+        }
+    </style>
 </head>
 <body class="bg-cream text-dark font-sans selection:bg-accent selection:text-dark">
 
@@ -64,12 +72,14 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="relative pt-32 pb-20 px-6 overflow-hidden">
-        <div class="absolute inset-0 z-0 opacity-[0.03]" style="background-image: radial-gradient(var(--dark) 1.5px, transparent 1.5px); background-size: 24px 24px;"></div>
+    <section class="relative pt-32 pb-20 px-6 overflow-hidden dot-pattern">
+        <div class="absolute inset-0 z-0 opacity-[0.03]"></div>
         
         <div class="relative z-10 max-w-4xl mx-auto text-center">
-            <div class="inline-block border border-dark rounded-full px-4 py-1 mb-8 text-sm font-medium bg-white/50">
-                ¡Adiós a las plantillas! ⬇️
+            <div class="inline-block mb-8 rotate-[-2deg]">
+                <span class="font-hand text-xl text-dark border-2 border-dark/20 rounded-full px-6 py-2 bg-white/40 shadow-sm">
+                    ¡Dile adiós a las plantillas! ⬇️
+                </span>
             </div>
             
             <h1 class="text-5xl md:text-8xl font-serif font-bold leading-tight mb-8">
@@ -95,37 +105,39 @@
         </div>
     </section>
 
-    <!-- Logo Cloud (Ampliado) -->
+    <!-- Logo Cloud -->
     <section class="py-20 bg-white/50 border-y border-dark/5">
         <div class="max-w-7xl mx-auto px-6">
-            <p class="text-center text-[11px] tracking-[0.2em] uppercase font-bold text-dark/30 mb-14">NEGOCIOS LOCALES QUE YA DIERON EL SALTO</p>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-12 md:gap-20 items-center justify-items-center opacity-80">
+            <p class="text-center text-[11px] tracking-[0.2em] uppercase font-bold text-dark/60 mb-14">NEGOCIOS LOCALES QUE YA DIERON EL SALTO</p>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-12 md:gap-20 items-center justify-items-center opacity-100">
                 <div class="text-center group transition-transform hover:scale-105">
-                    <p class="font-serif font-bold text-2xl md:text-3xl mb-1">Astrid Fos</p>
-                    <p class="text-xs text-dark/40 font-medium">(Clínica Dental)</p>
+                    <p class="font-serif font-bold text-2xl md:text-3xl mb-1 text-dark/90">Astrid Fos</p>
+                    <p class="text-xs text-dark/50 font-medium">(Clínica Dental)</p>
                 </div>
                 <div class="text-center group transition-transform hover:scale-105">
-                    <p class="font-serif font-bold text-2xl md:text-3xl mb-1">Duran Transport</p>
-                    <p class="text-xs text-dark/40 font-medium">(Transporte Audiovisual)</p>
+                    <p class="font-serif font-bold text-2xl md:text-3xl mb-1 text-dark/90">Duran Transport</p>
+                    <p class="text-xs text-dark/50 font-medium">(Transporte Audiovisual)</p>
                 </div>
                 <div class="text-center group transition-transform hover:scale-105">
-                    <p class="font-serif font-bold text-2xl md:text-3xl mb-1">Rocío Art</p>
-                    <p class="text-xs text-dark/40 font-medium">(Clínica de Estética)</p>
+                    <p class="font-serif font-bold text-2xl md:text-3xl mb-1 text-dark/90">Rocío Art</p>
+                    <p class="text-xs text-dark/50 font-medium">(Clínica de Estética)</p>
                 </div>
                 <div class="text-center group transition-transform hover:scale-105">
-                    <p class="font-serif font-bold text-2xl md:text-3xl mb-1">El Racó de Jusu</p>
-                    <p class="text-xs text-dark/40 font-medium">(Velas Artesanales)</p>
+                    <p class="font-serif font-bold text-2xl md:text-3xl mb-1 text-dark/90">El Racó de Jusu</p>
+                    <p class="text-xs text-dark/50 font-medium">(Velas Artesanales)</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Why Us Section (Oculto del nav pero mantenido por contenido) -->
+    <!-- Why Us Section -->
     <section class="py-24 px-6">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16">
-                <div class="inline-block border border-dark rounded-full px-4 py-1 mb-6 text-xs font-bold uppercase tracking-wider">
-                    No somos la típica agencia 💡
+                <div class="inline-block mb-6 rotate-[1deg]">
+                    <span class="font-hand text-lg text-dark border-2 border-dark/20 rounded-full px-6 py-2 bg-white/40 shadow-sm">
+                        No somos la típica agencia 💡
+                    </span>
                 </div>
                 <h2 class="text-4xl md:text-6xl font-serif font-bold mb-6">
                     ¿Por qué elegirnos? <span class="text-dark/40">Sentido común y resultados.</span>
@@ -201,8 +213,9 @@
     </section>
 
     <!-- Nosotros Section -->
-    <section id="nosotros" class="py-24 px-6">
-        <div class="max-w-7xl mx-auto">
+    <section id="nosotros" class="relative py-24 px-6 dot-pattern">
+        <div class="absolute inset-0 z-0 opacity-[0.03]"></div>
+        <div class="relative z-10 max-w-7xl mx-auto">
             <div class="text-center mb-16">
                 <div class="inline-block border border-dark rounded-full px-4 py-1 mb-6 text-xs font-bold">Conócenos</div>
                 <h2 class="text-5xl md:text-7xl font-serif font-bold mb-6">Hola, somos <span class="relative inline-block">Gerard y Eduard<svg class="absolute -bottom-2 left-0 w-full" viewBox="0 0 300 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 5C50 2 250 2 295 5" stroke="#FFD700" stroke-width="4" stroke-linecap="round"/></svg></span></h2>
@@ -229,7 +242,7 @@
             </div>
 
             <!-- Manifiesto -->
-            <div class="max-w-3xl mx-auto bg-white border-2 border-dark rounded-[2.5rem] p-10 md:p-16">
+            <div class="max-w-3xl mx-auto bg-white border-2 border-dark rounded-[2.5rem] p-10 md:p-16 shadow-lg">
                 <h3 class="text-3xl font-serif font-bold mb-10 text-center uppercase tracking-tighter">Nuestro Manifiesto</h3>
                 <ul class="space-y-6">
                     <li class="flex items-start gap-4">
@@ -365,8 +378,9 @@
     </section>
 
     <!-- FAQ Section -->
-    <section class="py-24 px-6 bg-white/30">
-        <div class="max-w-3xl mx-auto">
+    <section class="relative py-24 px-6 bg-white/30 dot-pattern">
+        <div class="absolute inset-0 z-0 opacity-[0.03]"></div>
+        <div class="relative z-10 max-w-3xl mx-auto">
             <h2 class="text-5xl font-serif font-bold text-center mb-16">Preguntas frecuentes.</h2>
             
             <div class="space-y-4">
@@ -429,6 +443,7 @@
                     <span>✓ Cero compromiso</span>
                 </div>
             </div>
+            <!-- Decorative dots -->
             <div class="absolute inset-0 opacity-5" style="background-image: radial-gradient(circle, white 1px, transparent 1px); background-size: 30px 30px;"></div>
         </div>
     </section>
@@ -565,8 +580,11 @@
             const modal = document.getElementById('demoModal');
             const content = document.getElementById('modalContent');
             modal.classList.remove('hidden');
-            setTimeout(() => { content.classList.remove('scale-95', 'opacity-0'); }, 10);
+            setTimeout(() => {
+                content.classList.remove('scale-95', 'opacity-0');
+            }, 10);
         }
+
         function closeModal() {
             const modal = document.getElementById('demoModal');
             const content = document.getElementById('modalContent');
@@ -577,11 +595,13 @@
                 document.getElementById('successSection').classList.add('hidden');
             }, 300);
         }
+
         function handleSubmit(e) {
             e.preventDefault();
             document.getElementById('formSection').classList.add('hidden');
             document.getElementById('successSection').classList.remove('hidden');
         }
+
         window.addEventListener('load', () => {
             if (!localStorage.getItem('cookiesAccepted')) {
                 setTimeout(() => {
@@ -590,12 +610,14 @@
                 }, 1500);
             }
         });
+
         function acceptCookies() {
             const banner = document.getElementById('cookieBanner');
             banner.classList.add('translate-y-20', 'opacity-0');
             localStorage.setItem('cookiesAccepted', 'true');
             setTimeout(() => banner.style.display = 'none', 500);
         }
+
         function toggleFaq(btn) {
             const content = btn.nextElementSibling;
             const span = btn.querySelector('span');
