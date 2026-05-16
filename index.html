@@ -48,30 +48,9 @@
             background-size: 50px 50px;
             pointer-events: none;
         }
-
-        /* Mouse Follower */
-        #cursor-follower {
-            width: 20px;
-            height: 20px;
-            background-color: #FFD700;
-            border-radius: 50%;
-            position: fixed;
-            pointer-events: none;
-            z-index: 9999;
-            opacity: 0.5;
-            transition: transform 0.1s ease-out;
-            mix-blend-mode: multiply;
-            filter: blur(4px);
-        }
-
-        @media (max-width: 768px) {
-            #cursor-follower { display: none; }
-        }
     </style>
 </head>
 <body class="bg-cream text-dark font-sans selection:bg-accent selection:text-dark">
-
-    <div id="cursor-follower"></div>
 
     <!-- Navigation -->
     <nav class="fixed top-0 w-full z-50 bg-cream/80 backdrop-blur-md border-b border-dark/5">
@@ -601,13 +580,6 @@
     </div>
 
     <script>
-        // Cursor Follower
-        const follower = document.getElementById('cursor-follower');
-        document.addEventListener('mousemove', (e) => {
-            follower.style.left = e.clientX + 'px';
-            follower.style.top = e.clientY + 'px';
-        });
-
         function openModal() {
             const modal = document.getElementById('demoModal');
             const content = document.getElementById('modalContent');
