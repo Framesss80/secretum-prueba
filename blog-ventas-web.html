@@ -61,29 +61,56 @@
         </section>
     </article>
 
-    <!-- Modal (duplicated for functionality) -->
+    <!-- Modal (Matching Homepage) -->
     <div id="demoModal" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4">
         <div class="absolute inset-0 bg-dark/60 backdrop-blur-sm" onclick="closeModal()"></div>
         <div class="relative bg-cream border-2 border-dark w-full max-w-xl rounded-[2.5rem] p-8 md:p-12 overflow-hidden shadow-2xl scale-95 opacity-0 transition-all duration-300" id="modalContent">
-            <button onclick="closeModal()" class="absolute top-6 right-6 text-2xl">×</button>
+            <button onclick="closeModal()" class="absolute top-6 right-6 text-2xl hover:rotate-90 transition-transform">×</button>
             <div id="formSection">
-                <h3 class="text-3xl font-serif font-bold mb-4">Quiero mi demo.</h3>
-                <form onsubmit="handleSubmit(event)" class="space-y-4">
-                    <input type="text" placeholder="Nombre" required class="w-full bg-white border border-dark/10 rounded-xl px-4 py-3 outline-none">
-                    <input type="email" placeholder="Correo" required class="w-full bg-white border border-dark/10 rounded-xl px-4 py-3 outline-none">
-                    <button type="submit" class="w-full bg-dark text-cream py-4 rounded-xl font-bold hover:bg-accent hover:text-dark transition-all">Enviar</button>
+                <h3 class="text-3xl md:text-4xl font-serif font-bold mb-4">Quiero mi demo.</h3>
+                <p class="text-dark/60 mb-8 text-sm">Rellena este mini formulario y nos ponemos manos a la obra con tu nueva web.</p>
+                <form id="demoForm" class="space-y-4" onsubmit="handleSubmit(event)">
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="space-y-1">
+                            <label class="text-[10px] font-bold uppercase opacity-40">Nombre y Apellidos</label>
+                            <input type="text" required class="w-full bg-white border border-dark/10 rounded-xl px-4 py-3 text-sm focus:border-accent outline-none">
+                        </div>
+                        <div class="space-y-1">
+                            <label class="text-[10px] font-bold uppercase opacity-40">Nombre de tu empresa</label>
+                            <input type="text" required class="w-full bg-white border border-dark/10 rounded-xl px-4 py-3 text-sm focus:border-accent outline-none">
+                        </div>
+                    </div>
+                    <div class="space-y-1">
+                        <label class="text-[10px] font-bold uppercase opacity-40">Sector de la empresa</label>
+                        <input type="text" required class="w-full bg-white border border-dark/10 rounded-xl px-4 py-3 text-sm focus:border-accent outline-none">
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="space-y-1">
+                            <label class="text-[10px] font-bold uppercase opacity-40">Teléfono de contacto</label>
+                            <input type="tel" required class="w-full bg-white border border-dark/10 rounded-xl px-4 py-3 text-sm focus:border-accent outline-none">
+                        </div>
+                        <div class="space-y-1">
+                            <label class="text-[10px] font-bold uppercase opacity-40">Correo electrónico</label>
+                            <input type="email" required class="w-full bg-white border border-dark/10 rounded-xl px-4 py-3 text-sm focus:border-accent outline-none">
+                        </div>
+                    </div>
+                    <button type="submit" class="w-full bg-dark text-cream py-4 rounded-xl font-bold hover:bg-accent hover:text-dark transition-all mt-4">
+                        Enviar solicitud →
+                    </button>
                 </form>
             </div>
             <div id="successSection" class="hidden text-center py-12">
-                <div class="text-3xl font-serif font-bold">¡Enviado!</div>
-                <p>Contactaremos contigo pronto.</p>
+                <div class="w-20 h-20 bg-accent rounded-full flex items-center justify-center mx-auto mb-6 text-3xl">✓</div>
+                <h3 class="text-3xl font-serif font-bold mb-4">¡Enviado!</h3>
+                <p class="text-dark/60">En menos de 24h contactaremos contigo para empezar a diseñar tu demo gratuita.</p>
+                <button onclick="closeModal()" class="mt-8 text-sm font-bold border-b-2 border-dark pb-1">Cerrar ventana</button>
             </div>
         </div>
     </div>
 
     <script>
         function openModal() { document.getElementById('demoModal').classList.remove('hidden'); setTimeout(() => { document.getElementById('modalContent').classList.remove('scale-95', 'opacity-0'); }, 10); }
-        function closeModal() { document.getElementById('modalContent').classList.add('scale-95', 'opacity-0'); setTimeout(() => { document.getElementById('demoModal').classList.add('hidden'); }, 300); }
+        function closeModal() { document.getElementById('modalContent').classList.add('scale-95', 'opacity-0'); setTimeout(() => { document.getElementById('demoModal').classList.add('hidden'); document.getElementById('formSection').classList.remove('hidden'); document.getElementById('successSection').classList.add('hidden'); }, 300); }
         function handleSubmit(e) { e.preventDefault(); document.getElementById('formSection').classList.add('hidden'); document.getElementById('successSection').classList.remove('hidden'); }
     </script>
 </body>
