@@ -510,8 +510,8 @@
     <!-- Form Modal -->
     <div id="demoModal" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4">
         <div class="absolute inset-0 bg-dark/60 backdrop-blur-sm" onclick="closeModal()"></div>
-        <div class="relative bg-cream border-2 border-dark w-full max-w-xl rounded-[2.5rem] p-8 md:p-12 overflow-hidden shadow-2xl scale-95 opacity-0 transition-all duration-300" id="modalContent">
-            <button onclick="closeModal()" class="absolute top-6 right-6 text-2xl hover:rotate-90 transition-transform">×</button>
+        <div class="relative bg-cream border-2 border-dark w-full max-w-xl rounded-[2rem] md:rounded-[2.5rem] p-6 md:p-12 overflow-y-auto max-h-[90vh] shadow-2xl scale-95 opacity-0 transition-all duration-300" id="modalContent">
+            <button onclick="closeModal()" class="absolute top-6 right-6 text-2xl hover:rotate-90 transition-transform z-10">×</button>
             
             <div id="formSection">
                 <h3 class="text-3xl md:text-4xl font-serif font-bold mb-4">Quiero mi demo.</h3>
