@@ -69,7 +69,7 @@
             <div id="formSection">
                 <h3 class="text-3xl md:text-4xl font-serif font-bold mb-4">Quiero mi demo.</h3>
                 <p class="text-dark/60 mb-8 text-sm">Rellena este mini formulario y nos ponemos manos a la obra con tu nueva web.</p>
-                <form id="demoForm" class="space-y-4" onsubmit="handleSubmit(event)">
+                <form id="demoForm" class="space-y-4">
                     <div class="grid md:grid-cols-2 gap-4">
                         <div class="space-y-1">
                             <label class="text-[10px] font-bold uppercase opacity-40">Nombre y Apellidos</label>
@@ -111,7 +111,18 @@
     <script>
         function openModal() { document.getElementById('demoModal').classList.remove('hidden'); setTimeout(() => { document.getElementById('modalContent').classList.remove('scale-95', 'opacity-0'); }, 10); }
         function closeModal() { document.getElementById('modalContent').classList.add('scale-95', 'opacity-0'); setTimeout(() => { document.getElementById('demoModal').classList.add('hidden'); document.getElementById('formSection').classList.remove('hidden'); document.getElementById('successSection').classList.add('hidden'); }, 300); }
-        function handleSubmit(e) { e.preventDefault(); document.getElementById('formSection').classList.add('hidden'); document.getElementById('successSection').classList.remove('hidden'); }
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('demoForm');
+            if (form) {
+                form.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    document.getElementById('formSection').classList.add('hidden');
+                    document.getElementById('successSection').classList.remove('hidden');
+                    document.getElementById('modalContent').scrollTop = 0;
+                });
+            }
+        });
     </script>
 </body>
 </html>
