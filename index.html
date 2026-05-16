@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secretum. | Tu negocio merece una web que no dé vergüenza</title>
+    <meta name="description" content="Diseñamos y programamos webs ultrarrápidas a medida. La alternativa profesional y honesta a las plantillas lentas.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cream: '#F5F5F0',
+                        dark: '#0A0A0A',
+                        accent: '#FFD700',
+                    },
+                    fontFamily: {
+                        serif: ['Cormorant Garamond', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-cream text-dark font-sans selection:bg-accent selection:text-dark">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-cream/80 backdrop-blur-md border-b border-dark/5">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <div class="w-8 h-8 bg-dark rounded-full flex items-center justify-center">
+                    <span class="text-cream text-xl font-bold font-serif">S</span>
+                </div>
+                <span class="text-xl font-bold tracking-tight">Secretum<span class="text-accent">.</span></span>
+            </div>
+            
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="#servicios" class="hover:opacity-60 transition-opacity">Servicios</a>
+                <a href="#metodo" class="hover:opacity-60 transition-opacity">Método</a>
+                <a href="#proyectos" class="hover:opacity-60 transition-opacity">Proyectos</a>
+            </div>
+            
+            <a href="https://wa.me/34600000000" class="bg-dark text-cream px-6 py-2.5 rounded-full text-sm font-bold hover:scale-105 transition-transform">
+                Pide tu web
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="inline-block border border-dark rounded-full px-4 py-1 mb-8 text-sm font-medium">
+                ¡Adiós a las plantillas! ⬇️
+            </div>
+            
+            <h1 class="text-5xl md:text-8xl font-serif font-bold leading-tight mb-8">
+                Tu negocio merece una web <br> 
+                <span class="relative inline-block">
+                    que no dé vergüenza
+                    <svg class="absolute -bottom-2 left-0 w-full" viewBox="0 0 500 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 15C100 5 400 5 495 15" stroke="#FFD700" stroke-width="8" stroke-linecap="round"/>
+                    </svg>
+                </span>.
+            </h1>
+            
+            <p class="text-lg md:text-xl text-dark/70 mb-10 max-w-2xl mx-auto leading-relaxed">
+                Diseñamos y programamos webs ultrarrápidas a medida. Te montamos una demo gratis para que veas que no somos la típica agencia.
+            </p>
+            
+            <div class="flex flex-col items-center gap-4">
+                <button class="bg-dark text-cream px-10 py-4 rounded-full text-lg font-bold hover:scale-105 transition-transform shadow-xl">
+                    Quiero mi demo
+                </button>
+                <span class="text-xs text-dark/50 italic">* Sin tarjeta. Sin compromiso.</span>
+            </div>
+            
+            <div class="mt-16 flex justify-center">
+                <div class="inline-flex items-center gap-3 bg-white border border-dark rounded-full px-4 py-2 text-sm font-medium">
+                    <span>¡Vuela de rápido!</span>
+                    <img src="images/char_dental.png" alt="Icon" class="w-8 h-8 rounded-full border border-dark/10">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Logo Cloud -->
+    <section class="py-12 bg-white/50 border-y border-dark/5">
+        <div class="max-w-7xl mx-auto px-6">
+            <p class="text-center text-[10px] tracking-widest uppercase font-bold text-dark/40 mb-10">Negocios locales que ya dieron el salto</p>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 items-center justify-items-center opacity-70">
+                <div class="text-center">
+                    <p class="font-serif font-bold text-xl">Astrid Fos</p>
+                    <p class="text-[10px] text-dark/50">(Clínica Dental)</p>
+                </div>
+                <div class="text-center">
+                    <p class="font-serif font-bold text-xl">Duran Transport</p>
+                    <p class="text-[10px] text-dark/50">(Transporte Audiovisual)</p>
+                </div>
+                <div class="text-center">
+                    <p class="font-serif font-bold text-xl">Rocío Art</p>
+                    <p class="text-[10px] text-dark/50">(Clínica de Estética)</p>
+                </div>
+                <div class="text-center">
+                    <p class="font-serif font-bold text-xl">El Racó de Jusu</p>
+                    <p class="text-[10px] text-dark/50">(Velas Artesanales)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us Section -->
+    <section id="servicios" class="py-24 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <div class="inline-block border border-dark rounded-full px-4 py-1 mb-6 text-xs font-bold uppercase tracking-wider">
+                    No somos la típica agencia 💡
+                </div>
+                <h2 class="text-4xl md:text-6xl font-serif font-bold mb-6">
+                    ¿Por qué elegirnos? <span class="text-dark/40">Sentido común y resultados.</span>
+                </h2>
+                <p class="max-w-2xl mx-auto text-dark/60 italic">
+                    Estamos hartos de ver cómo cobran dinerales por plantillas lentas que no sirven de nada. Somos la alternativa profesional y honesta.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="bg-white border-2 border-dark p-8 rounded-[2rem] hover:-translate-y-2 transition-transform">
+                    <img src="images/char_dental.png" alt="" class="w-16 h-16 mb-6">
+                    <h3 class="text-xl font-bold mb-3 font-serif">Velocidad absurda</h3>
+                    <p class="text-sm text-dark/70 leading-relaxed">Si tu web tarda más de 3 segundos, pierdes clientes. Programamos desde cero para que vuele.</p>
+                </div>
+                <div class="bg-white border-2 border-dark p-8 rounded-[2rem] hover:-translate-y-2 transition-transform">
+                    <img src="images/char_transport.png" alt="" class="w-16 h-16 mb-6">
+                    <h3 class="text-xl font-bold mb-3 font-serif">Serás dueño de todo</h3>
+                    <p class="text-sm text-dark/70 leading-relaxed">Nada de secuestros de dominio. Te entregamos código, hosting y las llaves de tu negocio.</p>
+                </div>
+                <div class="bg-white border-2 border-dark p-8 rounded-[2rem] hover:-translate-y-2 transition-transform">
+                    <img src="images/char_estetica.png" alt="" class="w-16 h-16 mb-6">
+                    <h3 class="text-xl font-bold mb-3 font-serif">Diseño que vende</h3>
+                    <p class="text-sm text-dark/70 leading-relaxed">Diseñamos con un objetivo claro: que quien entre confíe, te contacte o compre.</p>
+                </div>
+                <div class="bg-white border-2 border-dark p-8 rounded-[2rem] hover:-translate-y-2 transition-transform">
+                    <img src="images/char_velas.png" alt="" class="w-16 h-16 mb-6">
+                    <h3 class="text-xl font-bold mb-3 font-serif">Soporte cercano</h3>
+                    <p class="text-sm text-dark/70 leading-relaxed">Si algo se rompe, nos tienes a un WhatsApp. Hablas con los creadores, no con bots.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Method Section -->
+    <section id="metodo" class="py-24 px-6 bg-dark text-cream">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20">
+                <div class="inline-block border border-accent/30 text-accent rounded-full px-4 py-1 mb-6 text-xs font-bold uppercase tracking-wider">
+                    Transparencia total
+                </div>
+                <h2 class="text-5xl md:text-7xl font-serif font-bold mb-6">
+                    Un sistema que <span class="text-accent italic">funciona.</span>
+                </h2>
+                <p class="max-w-2xl mx-auto text-cream/60">
+                    Nada de tecnicismos. Tú te dedicas a tu negocio y nosotros nos encargamos de que luzca espectacular en internet.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-4">
+                <div class="bg-[#151515] p-10 rounded-[2.5rem] border border-white/5">
+                    <span class="text-5xl font-serif font-bold text-accent mb-6 block">01</span>
+                    <h3 class="text-2xl font-bold mb-4">Hablamos sin postureo</h3>
+                    <p class="text-cream/60">Charla honesta para entender tu negocio, tu cliente y dónde están las fugas.</p>
+                </div>
+                <div class="bg-[#151515] p-10 rounded-[2.5rem] border border-white/5">
+                    <span class="text-5xl font-serif font-bold text-accent mb-6 block">02</span>
+                    <h3 class="text-2xl font-bold mb-4">Te enseñamos la demo</h3>
+                    <p class="text-cream/60">En pocas horas te presentaremos una maqueta real navegable. Sin powerpoints ni promesas vacías.</p>
+                </div>
+                <div class="bg-[#151515] p-10 rounded-[2.5rem] border border-white/5">
+                    <span class="text-5xl font-serif font-bold text-accent mb-6 block">03</span>
+                    <h3 class="text-2xl font-bold mb-4">Construimos a medida</h3>
+                    <p class="text-cream/60">Programamos desde cero. Cada línea de código pensada para que cargue al instante.</p>
+                </div>
+                <div class="bg-[#151515] p-10 rounded-[2.5rem] border border-white/5">
+                    <span class="text-5xl font-serif font-bold text-accent mb-6 block">04</span>
+                    <h3 class="text-2xl font-bold mb-4">Lanzamos y cuidamos</h3>
+                    <p class="text-cream/60">Publicamos, formamos a tu equipo y seguimos a tu lado cuando lo necesites.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="proyectos" class="py-24 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <div class="inline-block border border-dark rounded-full px-4 py-1 mb-6 text-xs font-bold">Hechos con cariño</div>
+                <h2 class="text-5xl md:text-7xl font-serif font-bold mb-6">Algunos negocios que ya vuelan.</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Project Card 1 -->
+                <div class="group cursor-pointer">
+                    <div class="bg-[#F8D7DA] aspect-[4/5] rounded-[2.5rem] border-2 border-dark overflow-hidden p-8 flex items-end justify-center relative transition-all group-hover:-rotate-1">
+                        <img src="images/char_dental.png" alt="Astrid Fos" class="w-full h-auto object-contain">
+                    </div>
+                    <div class="mt-6 flex justify-between items-start border-t-2 border-dark pt-4">
+                        <div>
+                            <p class="text-[10px] uppercase font-bold tracking-widest text-dark/40 mb-1">Clínica Dental</p>
+                            <h3 class="text-2xl font-serif font-bold">Astrid Fos</h3>
+                        </div>
+                        <div class="w-10 h-10 border-2 border-dark rounded-full flex items-center justify-center group-hover:bg-dark group-hover:text-cream transition-colors">
+                            →
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Card 2 -->
+                <div class="group cursor-pointer">
+                    <div class="bg-[#D1E7DD] aspect-[4/5] rounded-[2.5rem] border-2 border-dark overflow-hidden p-8 flex items-end justify-center relative transition-all group-hover:rotate-1">
+                        <img src="images/char_transport.png" alt="Duran Transport" class="w-full h-auto object-contain">
+                    </div>
+                    <div class="mt-6 flex justify-between items-start border-t-2 border-dark pt-4">
+                        <div>
+                            <p class="text-[10px] uppercase font-bold tracking-widest text-dark/40 mb-1">Transporte Audiovisual</p>
+                            <h3 class="text-2xl font-serif font-bold">Duran Transport</h3>
+                        </div>
+                        <div class="w-10 h-10 border-2 border-dark rounded-full flex items-center justify-center group-hover:bg-dark group-hover:text-cream transition-colors">
+                            →
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Card 3 -->
+                <div class="group cursor-pointer">
+                    <div class="bg-[#E2E3F3] aspect-[4/5] rounded-[2.5rem] border-2 border-dark overflow-hidden p-8 flex items-end justify-center relative transition-all group-hover:-rotate-1">
+                        <img src="images/char_estetica.png" alt="Rocío Art" class="w-full h-auto object-contain">
+                    </div>
+                    <div class="mt-6 flex justify-between items-start border-t-2 border-dark pt-4">
+                        <div>
+                            <p class="text-[10px] uppercase font-bold tracking-widest text-dark/40 mb-1">Clínica de Estética</p>
+                            <h3 class="text-2xl font-serif font-bold">Rocío Art</h3>
+                        </div>
+                        <div class="w-10 h-10 border-2 border-dark rounded-full flex items-center justify-center group-hover:bg-dark group-hover:text-cream transition-colors">
+                            →
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-24 px-6 bg-white/30">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-5xl font-serif font-bold text-center mb-16">Preguntas frecuentes.</h2>
+            
+            <div class="space-y-4">
+                <div class="faq-item bg-cream border-2 border-dark rounded-2xl overflow-hidden">
+                    <button class="w-full px-8 py-6 flex justify-between items-center text-left font-bold" onclick="toggleFaq(this)">
+                        ¿Cuánto tarda una web?
+                        <span class="text-2xl">+</span>
+                    </button>
+                    <div class="px-8 pb-6 text-dark/70 hidden">
+                        Entre una y dos semanas según el alcance. La demo inicial te llega en pocas horas.
+                    </div>
+                </div>
+                <div class="faq-item bg-cream border-2 border-dark rounded-2xl overflow-hidden">
+                    <button class="w-full px-8 py-6 flex justify-between items-center text-left font-bold" onclick="toggleFaq(this)">
+                        ¿Y si no me convence la demo?
+                        <span class="text-2xl">+</span>
+                    </button>
+                    <div class="px-8 pb-6 text-dark/70 hidden">
+                        No pagas nada. La demo es gratis precisamente para eso: ver si encajamos.
+                    </div>
+                </div>
+                <div class="faq-item bg-cream border-2 border-dark rounded-2xl overflow-hidden">
+                    <button class="w-full px-8 py-6 flex justify-between items-center text-left font-bold" onclick="toggleFaq(this)">
+                        ¿Os encargáis del hosting?
+                        <span class="text-2xl">+</span>
+                    </button>
+                    <div class="px-8 pb-6 text-dark/70 hidden">
+                        Sí, te lo dejamos montado en infraestructura ultra rápida. Pero tú eres dueño de todo.
+                    </div>
+                </div>
+                <div class="faq-item bg-cream border-2 border-dark rounded-2xl overflow-hidden">
+                    <button class="w-full px-8 py-6 flex justify-between items-center text-left font-bold" onclick="toggleFaq(this)">
+                        ¿Trabajáis con WordPress?
+                        <span class="text-2xl">+</span>
+                    </button>
+                    <div class="px-8 pb-6 text-dark/70 hidden">
+                        No. Programamos a medida con tecnología moderna para que tu web cargue al instante.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-24 px-6">
+        <div class="max-w-5xl mx-auto bg-dark text-cream rounded-[3rem] p-12 md:p-24 text-center relative overflow-hidden">
+            <div class="relative z-10">
+                <h2 class="text-5xl md:text-7xl font-serif font-bold mb-8">
+                    ¿Listo para tener <br> una web <span class="text-accent">en serio?</span>
+                </h2>
+                <p class="text-xl text-cream/70 mb-12 max-w-xl mx-auto">
+                    Te montamos una demo gratis en pocas horas. Si te gusta, hablamos. Si no, no pasa nada.
+                </p>
+                <button class="bg-accent text-dark px-10 py-5 rounded-full text-xl font-bold hover:scale-105 transition-transform shadow-2xl">
+                    Pedir mi demo gratis →
+                </button>
+                <div class="mt-8 flex justify-center gap-8 text-xs text-cream/40 italic">
+                    <span>✓ Sin tarjeta</span>
+                    <span>✓ Respuesta en 24h</span>
+                    <span>✓ Cero compromiso</span>
+                </div>
+            </div>
+            <!-- Decorative dots -->
+            <div class="absolute inset-0 opacity-5" style="background-image: radial-gradient(circle, white 1px, transparent 1px); background-size: 30px 30px;"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-20 px-6 border-t border-dark/5">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+            <div class="col-span-1 md:col-span-1">
+                <div class="flex items-center gap-2 mb-6">
+                    <div class="w-8 h-8 bg-dark rounded-full flex items-center justify-center">
+                        <span class="text-cream text-xl font-bold font-serif">S</span>
+                    </div>
+                    <span class="text-xl font-bold tracking-tight">Secretum<span class="text-accent">.</span></span>
+                </div>
+                <p class="text-sm text-dark/50 leading-relaxed mb-6">
+                    No somos la típica agencia. Hacemos webs ultrarrápidas a medida para negocios que quieren destacar de verdad.
+                </p>
+                <div class="flex gap-4">
+                    <a href="#" class="w-10 h-10 border border-dark/10 rounded-full flex items-center justify-center hover:bg-dark hover:text-cream transition-colors">ig</a>
+                    <a href="#" class="w-10 h-10 border border-dark/10 rounded-full flex items-center justify-center hover:bg-dark hover:text-cream transition-colors">tw</a>
+                </div>
+            </div>
+            
+            <div>
+                <h4 class="font-bold mb-6 text-xs uppercase tracking-widest opacity-40">Navegación</h4>
+                <ul class="space-y-4 text-sm font-medium">
+                    <li><a href="#" class="hover:opacity-60">Servicios</a></li>
+                    <li><a href="#" class="hover:opacity-60">Método</a></li>
+                    <li><a href="#" class="hover:opacity-60">Proyectos</a></li>
+                    <li><a href="#" class="hover:opacity-60">Nosotros</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h4 class="font-bold mb-6 text-xs uppercase tracking-widest opacity-40">Contacto</h4>
+                <ul class="space-y-4 text-sm font-medium">
+                    <li><a href="mailto:hola@secretum.agency" class="hover:opacity-60">hola@secretum.agency</a></li>
+                    <li><a href="tel:+34600000000" class="hover:opacity-60">+34 600 000 000</a></li>
+                    <li>Barcelona, España</li>
+                </ul>
+            </div>
+            
+            <div>
+                <h4 class="font-bold mb-6 text-xs uppercase tracking-widest opacity-40">Legal</h4>
+                <ul class="space-y-4 text-sm font-medium">
+                    <li><a href="#" class="hover:opacity-60">Privacidad</a></li>
+                    <li><a href="#" class="hover:opacity-60">Cookies</a></li>
+                    <li><a href="#" class="hover:opacity-60">Aviso Legal</a></li>
+                    <li><a href="#" class="hover:opacity-60">Términos</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto mt-20 pt-8 border-t border-dark/5 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-dark/30">
+            <p>© 2026 Secretum Agency. Todos los derechos reservados.</p>
+            <p class="font-medium italic">Hecho con ❤️ (y código)</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleFaq(btn) {
+            const content = btn.nextElementSibling;
+            const span = btn.querySelector('span');
+            
+            // Close other FAQs
+            document.querySelectorAll('.faq-item div').forEach(div => {
+                if (div !== content) div.classList.add('hidden');
+            });
+            document.querySelectorAll('.faq-item span').forEach(s => {
+                if (s !== span) s.innerText = '+';
+            });
+            
+            // Toggle current
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                span.innerText = '×';
+            } else {
+                content.classList.add('hidden');
+                span.innerText = '+';
+            }
+        }
+    </script>
+</body>
+</html>
