@@ -3,51 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>El impacto de la IA en los negocios locales | Blog Secretum.</title>
-    <meta name="description" content="Cómo la inteligencia artificial está revolucionando la forma en que las PYMES y negocios locales atraen clientes y optimizan sus procesos.">
+    <title>El impacto de la IA en los negocios locales | Blog Secretum</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    <style>
-        body { background-color: #F5F5F0; font-family: 'Inter', sans-serif; color: #0A0A0A; }
-        h1, h2, h3 { font-family: 'Cormorant Garamond', serif; }
-        .prose p { margin-bottom: 1.5rem; line-height: 1.8; color: rgba(10, 10, 10, 0.7); }
-        .prose h2 { font-size: 2.5rem; margin-top: 3rem; margin-bottom: 1.5rem; font-weight: bold; }
-        .prose h3 { font-size: 1.8rem; margin-top: 2rem; margin-bottom: 1rem; font-weight: bold; }
-    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { cream: '#F5F5F0', dark: '#0A0A0A', accent: '#FFD700' },
+                    fontFamily: { serif: ['Cormorant Garamond', 'serif'], sans: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
 </head>
-<body class="p-6 md:p-24">
-    <article class="max-w-3xl mx-auto">
-        <a href="index.html" class="inline-block mb-12 text-sm font-bold opacity-40 hover:opacity-100">← Volver al inicio</a>
+<body class="bg-cream text-dark font-sans selection:bg-accent selection:text-dark">
+    <nav class="fixed top-0 w-full z-50 bg-cream/80 backdrop-blur-md border-b border-dark/5">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-2">
+                <div class="w-8 h-8 bg-dark rounded-full flex items-center justify-center">
+                    <span class="text-cream text-xl font-bold font-serif">S</span>
+                </div>
+                <span class="text-xl font-bold tracking-tight">Secretum<span class="text-accent">.</span></span>
+            </a>
+            <a href="index.html" class="text-sm font-bold border-b-2 border-dark pb-0.5">Volver al inicio</a>
+        </div>
+    </nav>
+
+    <article class="pt-32 pb-20 px-6 max-w-4xl mx-auto">
+        <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=2426&ixlib=rb-4.0.3" alt="Inteligencia Artificial" class="w-full h-[400px] object-cover rounded-[2.5rem] mb-12 shadow-2xl">
         
-        <header class="mb-16">
-            <p class="text-xs font-bold text-blue-500 uppercase tracking-widest mb-4">Tecnología e IA</p>
-            <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-8">El impacto de la IA en los negocios locales</h1>
-            <p class="text-xl text-dark/50 italic leading-relaxed">
-                La Inteligencia Artificial ya no es ciencia ficción para grandes tecnológicas. Es la herramienta definitiva para que el comercio de barrio compita con los gigantes.
-            </p>
+        <header class="mb-12">
+            <div class="text-accent font-bold uppercase tracking-widest text-sm mb-4">IA & Innovación</div>
+            <h1 class="text-5xl md:text-7xl font-serif font-bold leading-tight mb-8">El impacto de la IA en los negocios locales</h1>
+            <p class="text-xl text-dark/60 italic leading-relaxed">Cómo la Inteligencia Artificial está permitiendo a las PYMES competir cara a cara con las multinacionales.</p>
         </header>
 
-        <div class="prose">
-            <p>Muchos dueños de negocios locales creen que la IA es algo lejano, caro o excesivamente complejo. La realidad es todo lo contrario: la IA es el gran igualador que permite que una pequeña clínica o un taller mecánico tengan una presencia digital de primer nivel.</p>
-
-            <h2>1. Personalización masiva</h2>
-            <p>La IA nos permite analizar qué buscan tus clientes y ofrecerles exactamente lo que necesitan. Ya no se trata de lanzar mensajes al aire, sino de personalizar la experiencia de cada usuario que entra en tu web.</p>
+        <div class="prose prose-lg max-w-none text-dark/80 space-y-8 leading-relaxed">
+            <p>Hasta hace muy poco, la Inteligencia Artificial era algo reservado para laboratorios de investigación y gigantes tecnológicos como Google o Meta. Sin embargo, en el último año, las barreras de entrada se han desplomado, permitiendo que un negocio local pueda usar estas herramientas para disparar su productividad.</p>
             
-            <h2>2. Optimización de contenidos y SEO</h2>
-            <p>Gracias a algoritmos avanzados, ahora podemos saber exactamente qué palabras clave tienen menos competencia y más volumen de búsqueda para tu zona geográfica específica. Esto significa que cuando alguien busque tus servicios en Google, tú estarás ahí primero.</p>
+            <h2 class="text-3xl font-serif font-bold text-dark mt-12 mb-4">Automatización de la atención al cliente</h2>
+            <p>Los chatbots modernos no tienen nada que ver con los de hace cinco años. Gracias a los modelos de lenguaje (LLMs), ahora podemos implementar asistentes que responden dudas de clientes las 24 horas del día con un lenguaje natural y empático.</p>
 
-            <h2>3. Mejora de la experiencia de usuario</h2>
-            <p>Desde chatbots inteligentes que responden dudas a las 3 de la mañana hasta sistemas de reserva automáticos. La IA elimina la fricción entre el cliente y tu negocio, permitiéndote vender incluso cuando estás durmiendo.</p>
+            <h2 class="text-3xl font-serif font-bold text-dark mt-12 mb-4">Personalización extrema del marketing</h2>
+            <p>La IA nos permite analizar miles de datos en segundos para saber qué prefiere tu cliente ideal. Esto se traduce en campañas de publicidad mucho más baratas y efectivas, porque impactamos solo a quien realmente tiene interés en tu servicio.</p>
 
-            <h2>¿Cómo empezamos en Secretum?</h2>
-            <p>Nosotros no aplicamos la IA por moda. La usamos para que tu web sea más rápida, más inteligente y, sobre todo, más rentable. Es el motor que impulsa nuestras webs "ultrarrápidas".</p>
+            <h2 class="text-3xl font-serif font-bold text-dark mt-12 mb-4">Generación de contenido a escala</h2>
+            <p>Crear artículos para el blog, posts para Instagram o guiones de vídeo solía llevar días. Ahora, con la supervisión humana adecuada, la IA nos permite generar contenido de alta calidad en minutos, manteniendo tu marca siempre relevante.</p>
         </div>
-        
-        <div class="mt-24 p-12 bg-dark text-cream rounded-[2.5rem] text-center">
-            <h3 class="text-3xl font-serif font-bold mb-6 italic text-white">¿Quieres digitalizar tu negocio con IA?</h3>
-            <p class="mb-8 opacity-70">Hablamos sobre cómo aplicar tecnología real para obtener resultados reales.</p>
-            <a href="index.html" class="inline-block bg-yellow-400 text-dark px-10 py-4 rounded-full font-bold hover:scale-105 transition-transform">Consultar ahora</a>
-        </div>
+
+        <section class="mt-20 p-12 bg-dark text-cream rounded-[3rem] text-center">
+            <h3 class="text-4xl font-serif font-bold mb-6 text-white">¿Quieres integrar la IA en tu negocio?</h3>
+            <p class="text-lg opacity-80 mb-10 max-w-xl mx-auto text-white">Te ayudamos a implementar las herramientas adecuadas para que ahorres horas de trabajo cada día.</p>
+            <button onclick="openModal()" class="bg-accent text-dark px-10 py-4 rounded-full font-bold hover:scale-105 transition-transform">Consultar ahora</button>
+        </section>
     </article>
+
+    <!-- Modal (duplicated for functionality) -->
+    <div id="demoModal" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4">
+        <div class="absolute inset-0 bg-dark/60 backdrop-blur-sm" onclick="closeModal()"></div>
+        <div class="relative bg-cream border-2 border-dark w-full max-w-xl rounded-[2.5rem] p-8 md:p-12 overflow-hidden shadow-2xl scale-95 opacity-0 transition-all duration-300" id="modalContent">
+            <button onclick="closeModal()" class="absolute top-6 right-6 text-2xl">×</button>
+            <div id="formSection">
+                <h3 class="text-3xl font-serif font-bold mb-4">Quiero mi demo.</h3>
+                <form onsubmit="handleSubmit(event)" class="space-y-4">
+                    <input type="text" placeholder="Nombre" required class="w-full bg-white border border-dark/10 rounded-xl px-4 py-3 outline-none">
+                    <input type="email" placeholder="Correo" required class="w-full bg-white border border-dark/10 rounded-xl px-4 py-3 outline-none">
+                    <button type="submit" class="w-full bg-dark text-cream py-4 rounded-xl font-bold hover:bg-accent hover:text-dark transition-all">Enviar</button>
+                </form>
+            </div>
+            <div id="successSection" class="hidden text-center py-12">
+                <div class="text-3xl font-serif font-bold">¡Enviado!</div>
+                <p>Contactaremos contigo pronto.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openModal() { document.getElementById('demoModal').classList.remove('hidden'); setTimeout(() => { document.getElementById('modalContent').classList.remove('scale-95', 'opacity-0'); }, 10); }
+        function closeModal() { document.getElementById('modalContent').classList.add('scale-95', 'opacity-0'); setTimeout(() => { document.getElementById('demoModal').classList.add('hidden'); }, 300); }
+        function handleSubmit(e) { e.preventDefault(); document.getElementById('formSection').classList.add('hidden'); document.getElementById('successSection').classList.remove('hidden'); }
+    </script>
 </body>
 </html>

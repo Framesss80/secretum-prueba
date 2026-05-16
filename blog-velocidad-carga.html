@@ -3,51 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Velocidad de carga: El factor olvidado | Blog Secretum.</title>
-    <meta name="description" content="Por qué la velocidad de carga de tu página web es el factor más importante para el SEO y las ventas en 2026. Guía de rendimiento.">
+    <title>Velocidad de carga: El factor olvidado | Blog Secretum</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    <style>
-        body { background-color: #F5F5F0; font-family: 'Inter', sans-serif; color: #0A0A0A; }
-        h1, h2, h3 { font-family: 'Cormorant Garamond', serif; }
-        .prose p { margin-bottom: 1.5rem; line-height: 1.8; color: rgba(10, 10, 10, 0.7); }
-        .prose h2 { font-size: 2.5rem; margin-top: 3rem; margin-bottom: 1.5rem; font-weight: bold; }
-        .prose h3 { font-size: 1.8rem; margin-top: 2rem; margin-bottom: 1rem; font-weight: bold; }
-    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { cream: '#F5F5F0', dark: '#0A0A0A', accent: '#FFD700' },
+                    fontFamily: { serif: ['Cormorant Garamond', 'serif'], sans: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
 </head>
-<body class="p-6 md:p-24">
-    <article class="max-w-3xl mx-auto">
-        <a href="index.html" class="inline-block mb-12 text-sm font-bold opacity-40 hover:opacity-100">← Volver al inicio</a>
+<body class="bg-cream text-dark font-sans selection:bg-accent selection:text-dark">
+    <nav class="fixed top-0 w-full z-50 bg-cream/80 backdrop-blur-md border-b border-dark/5">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-2">
+                <div class="w-8 h-8 bg-dark rounded-full flex items-center justify-center">
+                    <span class="text-cream text-xl font-bold font-serif">S</span>
+                </div>
+                <span class="text-xl font-bold tracking-tight">Secretum<span class="text-accent">.</span></span>
+            </a>
+            <a href="index.html" class="text-sm font-bold border-b-2 border-dark pb-0.5">Volver al inicio</a>
+        </div>
+    </nav>
+
+    <article class="pt-32 pb-20 px-6 max-w-4xl mx-auto">
+        <img src="https://images.unsplash.com/photo-1551288049-bbbda536339a?auto=format&fit=crop&q=80&w=2426&ixlib=rb-4.0.3" alt="Rendimiento web" class="w-full h-[400px] object-cover rounded-[2.5rem] mb-12 shadow-2xl">
         
-        <header class="mb-16">
-            <p class="text-xs font-bold text-green-500 uppercase tracking-widest mb-4">Rendimiento Web</p>
-            <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-8">Velocidad de carga: El factor olvidado</h1>
-            <p class="text-xl text-dark/50 italic leading-relaxed">
-                Cada segundo extra que tu web tarda en cargar, estás tirando dinero por la ventana. Te explicamos por qué Google odia las webs lentas.
-            </p>
+        <header class="mb-12">
+            <div class="text-accent font-bold uppercase tracking-widest text-sm mb-4">Rendimiento & WPO</div>
+            <h1 class="text-5xl md:text-7xl font-serif font-bold leading-tight mb-8">Velocidad de carga: El factor olvidado</h1>
+            <p class="text-xl text-dark/60 italic leading-relaxed">Te explicamos por qué cada milisegundo de retraso te está costando dinero real cada mes.</p>
         </header>
 
-        <div class="prose">
-            <p>Vivimos en la era de la inmediatez. Si un usuario busca tu local, entra en tu web y esta tarda en cargar, volverá atrás y entrará en la de tu competidor. Es así de crudo. El rendimiento ya no es una opción técnica, es una necesidad comercial básica.</p>
-
-            <h2>1. Google y los Core Web Vitals</h2>
-            <p>Google usa la velocidad de carga como uno de los principales factores de posicionamiento. Si tu web es lenta, te castigará enviándote a la página 2 o 3, donde nadie te encontrará. Los llamados Core Web Vitals miden la experiencia de usuario real, y nosotros diseñamos para que pases ese examen con nota.</p>
+        <div class="prose prose-lg max-w-none text-dark/80 space-y-8 leading-relaxed">
+            <p>La mayoría de los propietarios de negocios se centran en que su web sea "bonita". Pero lo que muchos no saben es que la belleza no sirve de nada si el usuario no tiene la paciencia para esperar a que cargue. En el mundo digital, la velocidad es sinónimo de profesionalidad y confianza.</p>
             
-            <h2>2. La tasa de rebote</h2>
-            <p>La mayoría de los usuarios abandonan una web si tarda más de 3 segundos en mostrar contenido. En dispositivos móviles con conexiones inestables, este factor es aún más crítico. Una web rápida asegura que el cliente vea tu oferta antes de impacientarse.</p>
+            <h2 class="text-3xl font-serif font-bold text-dark mt-12 mb-4">Google ama las webs rápidas</h2>
+            <p>Desde la actualización de las "Core Web Vitals", la velocidad de carga ya no es una opción, es un requisito. Google posicionará mejor a una web rápida con contenido decente que a una web lenta con contenido excelente. Si no vuelas, no existes.</p>
 
-            <h2>3. Conversión y Ventas</h2>
-            <p>Está demostrado que mejorar la velocidad de carga aumenta directamente la tasa de conversión. Un sitio ágil transmite profesionalidad y confianza. En Secretum Agency, eliminamos todo el código innecesario y las plantillas pesadas para ofrecerte una web que vuela.</p>
+            <h2 class="text-3xl font-serif font-bold text-dark mt-12 mb-4">La psicología de la espera</h2>
+            <p>Un retraso de un segundo en el tiempo de carga puede reducir las conversiones en un 7%. El cerebro humano interpreta la lentitud digital como falta de fiabilidad. Si tu web no carga rápido, el cliente piensa que tu servicio tampoco será eficiente.</p>
 
-            <h2>Nuestra promesa</h2>
-            <p>Programamos cada web desde cero, optimizando cada imagen y cada línea de código. No usamos trucos, usamos buena ingeniería para que tu negocio sea el más rápido de tu sector.</p>
+            <h2 class="text-3xl font-serif font-bold text-dark mt-12 mb-4">¿Cómo lo hacemos en Secretum?</h2>
+            <p>A diferencia de las agencias que usan plantillas pesadas y llenas de código basura, nosotros programamos a medida. Optimizamos cada imagen, minificamos cada línea de código y usamos servidores de última generación para asegurar que tu web vuele tanto en móvil como en ordenador.</p>
         </div>
-        
-        <div class="mt-24 p-12 bg-dark text-cream rounded-[2.5rem] text-center">
-            <h3 class="text-3xl font-serif font-bold mb-6 italic text-white">¿Quieres saber qué tan rápida es tu web?</h3>
-            <p class="mb-8 opacity-70">Hacemos una auditoría de rendimiento gratuita para tu negocio.</p>
-            <a href="index.html" class="inline-block bg-yellow-400 text-dark px-10 py-4 rounded-full font-bold hover:scale-105 transition-transform">Medir velocidad</a>
-        </div>
+
+        <section class="mt-20 p-12 bg-dark text-cream rounded-[3rem] text-center">
+            <h3 class="text-4xl font-serif font-bold mb-6 text-white">¿Tu web es demasiado lenta?</h3>
+            <p class="text-lg opacity-80 mb-10 max-w-xl mx-auto text-white">Haremos un diagnóstico de velocidad gratuito para tu sitio y te diremos cómo mejorar tus tiempos de carga.</p>
+            <button onclick="openModal()" class="bg-accent text-dark px-10 py-4 rounded-full font-bold hover:scale-105 transition-transform">Consultar ahora</button>
+        </section>
     </article>
+
+    <!-- Modal (duplicated for functionality) -->
+    <div id="demoModal" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4">
+        <div class="absolute inset-0 bg-dark/60 backdrop-blur-sm" onclick="closeModal()"></div>
+        <div class="relative bg-cream border-2 border-dark w-full max-w-xl rounded-[2.5rem] p-8 md:p-12 overflow-hidden shadow-2xl scale-95 opacity-0 transition-all duration-300" id="modalContent">
+            <button onclick="closeModal()" class="absolute top-6 right-6 text-2xl">×</button>
+            <div id="formSection">
+                <h3 class="text-3xl font-serif font-bold mb-4">Quiero mi demo.</h3>
+                <form onsubmit="handleSubmit(event)" class="space-y-4">
+                    <input type="text" placeholder="Nombre" required class="w-full bg-white border border-dark/10 rounded-xl px-4 py-3 outline-none">
+                    <input type="email" placeholder="Correo" required class="w-full bg-white border border-dark/10 rounded-xl px-4 py-3 outline-none">
+                    <button type="submit" class="w-full bg-dark text-cream py-4 rounded-xl font-bold hover:bg-accent hover:text-dark transition-all">Enviar</button>
+                </form>
+            </div>
+            <div id="successSection" class="hidden text-center py-12">
+                <div class="text-3xl font-serif font-bold">¡Enviado!</div>
+                <p>Contactaremos contigo pronto.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openModal() { document.getElementById('demoModal').classList.remove('hidden'); setTimeout(() => { document.getElementById('modalContent').classList.remove('scale-95', 'opacity-0'); }, 10); }
+        function closeModal() { document.getElementById('modalContent').classList.add('scale-95', 'opacity-0'); setTimeout(() => { document.getElementById('demoModal').classList.add('hidden'); }, 300); }
+        function handleSubmit(e) { e.preventDefault(); document.getElementById('formSection').classList.add('hidden'); document.getElementById('successSection').classList.remove('hidden'); }
+    </script>
 </body>
 </html>

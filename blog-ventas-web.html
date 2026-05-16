@@ -3,55 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>¿Por qué tu web no está vendiendo nada? | Blog Secretum.</title>
-    <meta name="description" content="Descubre los errores más comunes en el diseño web que impiden que tu negocio local convierta visitas en clientes. Guía completa de optimización.">
+    <title>¿Por qué tu web no está vendiendo nada? | Blog Secretum</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    <style>
-        body { background-color: #F5F5F0; font-family: 'Inter', sans-serif; color: #0A0A0A; }
-        h1, h2, h3 { font-family: 'Cormorant Garamond', serif; }
-        .prose p { margin-bottom: 1.5rem; line-height: 1.8; color: rgba(10, 10, 10, 0.7); }
-        .prose h2 { font-size: 2.5rem; margin-top: 3rem; margin-bottom: 1.5rem; font-weight: bold; }
-        .prose h3 { font-size: 1.8rem; margin-top: 2rem; margin-bottom: 1rem; font-weight: bold; }
-    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { cream: '#F5F5F0', dark: '#0A0A0A', accent: '#FFD700' },
+                    fontFamily: { serif: ['Cormorant Garamond', 'serif'], sans: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
 </head>
-<body class="p-6 md:p-24">
-    <article class="max-w-3xl mx-auto">
-        <a href="index.html" class="inline-block mb-12 text-sm font-bold opacity-40 hover:opacity-100">← Volver al inicio</a>
+<body class="bg-cream text-dark font-sans selection:bg-accent selection:text-dark">
+    <nav class="fixed top-0 w-full z-50 bg-cream/80 backdrop-blur-md border-b border-dark/5">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-2">
+                <div class="w-8 h-8 bg-dark rounded-full flex items-center justify-center">
+                    <span class="text-cream text-xl font-bold font-serif">S</span>
+                </div>
+                <span class="text-xl font-bold tracking-tight">Secretum<span class="text-accent">.</span></span>
+            </a>
+            <a href="index.html" class="text-sm font-bold border-b-2 border-dark pb-0.5">Volver al inicio</a>
+        </div>
+    </nav>
+
+    <article class="pt-32 pb-20 px-6 max-w-4xl mx-auto">
+        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=2426&ixlib=rb-4.0.3" alt="Estrategia de ventas web" class="w-full h-[400px] object-cover rounded-[2.5rem] mb-12 shadow-2xl">
         
-        <header class="mb-16">
-            <p class="text-xs font-bold text-yellow-500 uppercase tracking-widest mb-4">Diseño Web y Conversión</p>
-            <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-8">¿Por qué tu web no está vendiendo nada?</h1>
-            <p class="text-xl text-dark/50 italic leading-relaxed">
-                Tener una web "bonita" no es suficiente. Si tus visitas llegan pero no te llaman, tienes un problema de estructura y psicología de ventas.
-            </p>
+        <header class="mb-12">
+            <div class="text-accent font-bold uppercase tracking-widest text-sm mb-4">Diseño Web & Conversión</div>
+            <h1 class="text-5xl md:text-7xl font-serif font-bold leading-tight mb-8">¿Por qué tu web no está vendiendo nada?</h1>
+            <p class="text-xl text-dark/60 italic leading-relaxed">Descubre los 3 errores críticos que alejan a tus clientes potenciales antes de que lean tu oferta.</p>
         </header>
 
-        <div class="prose">
-            <p>Es el gran dilema de muchos negocios locales: invirtieron una suma considerable en una página web, pero el teléfono sigue sin sonar. En este artículo vamos a analizar por qué las plantillas estándar y los diseños "de catálogo" están matando tus conversiones.</p>
-
-            <h2>1. La regla de los 3 segundos</h2>
-            <p>El usuario medio toma una decisión sobre tu negocio en menos de 3 segundos. Si al entrar en tu web no entiende qué haces, cómo le ayudas y qué tiene que hacer después, se irá a la competencia. Muchas webs pecan de ser demasiado abstractas o de usar frases corporativas vacías.</p>
+        <div class="prose prose-lg max-w-none text-dark/80 space-y-8 leading-relaxed">
+            <p>Tener una página web no es lo mismo que tener un negocio online. Muchos empresarios locales cometen el error de pensar que, por el simple hecho de "estar en internet", los clientes llegarán solos. La realidad es mucho más cruda: si tu web no está diseñada para convertir, es solo un folleto digital caro que nadie lee.</p>
             
-            <h3>El error del "Bienvenidos"</h3>
-            <p>Nadie entra en una web para que le den la bienvenida. Entran porque tienen un problema. Si tu encabezado principal es un saludo genérico en lugar de una solución directa, estás perdiendo el 50% de tus ventas potenciales.</p>
+            <h2 class="text-3xl font-serif font-bold text-dark mt-12 mb-4">1. La velocidad es el primer filtro</h2>
+            <p>Vivimos en la era de la gratificación instantánea. Si tu web tarda más de 3 segundos en cargar, el 50% de tus visitas se marchará antes siquiera de ver tu logo. Google lo sabe, y por eso penaliza las webs lentas enviándolas a la segunda página de resultados.</p>
 
-            <h2>2. Falta de autoridad y prueba social</h2>
-            <p>En internet, nadie te conoce. Por eso, necesitas demostrar que eres real y que eres bueno. Si no tienes testimonios, logos de clientes o casos de éxito visibles, el usuario sentirá desconfianza.</p>
-            <p>Los negocios locales ganan por la cercanía. Muestra quién eres, muestra tu local o tus proyectos terminados. La transparencia vende más que cualquier efecto visual complejo.</p>
+            <h2 class="text-3xl font-serif font-bold text-dark mt-12 mb-4">2. Falta de claridad en la propuesta</h2>
+            <p>Cuando alguien entra en tu web, tienes menos de 5 segundos para responder a tres preguntas: ¿Qué haces? ¿Cómo me ayudas? ¿Qué tengo que hacer ahora? Si el usuario tiene que investigar para entender a qué te dedicas, lo has perdido.</p>
 
-            <h2>3. El laberinto de la navegación</h2>
-            <p>Si un cliente tiene que hacer 4 clics para encontrar tu contacto, no te va a contactar. La navegación debe ser limpia y directa. En Secretum siempre recomendamos un menú simplificado con un objetivo claro: que el usuario sepa siempre cuál es el siguiente paso.</p>
-
-            <h2>Conclusión</h2>
-            <p>Optimizar una web para vender no es magia, es sentido común aplicado al diseño. En Secretum Agency nos enfocamos en que cada píxel de tu web tenga un propósito: convertir una visita anónima en un cliente real para tu negocio.</p>
+            <h2 class="text-3xl font-serif font-bold text-dark mt-12 mb-4">3. Ausencia de llamadas a la acción (CTAs)</h2>
+            <p>No asumas que el cliente sabe qué hacer. Tienes que guiarlo de la mano. Un botón de "Pide tu demo" o "Reserva una cita" debe estar siempre visible y ser lo suficientemente atractivo para incitar al clic.</p>
         </div>
-        
-        <div class="mt-24 p-12 bg-dark text-cream rounded-[2.5rem] text-center">
-            <h3 class="text-3xl font-serif font-bold mb-6 italic text-white">¿Quieres que analicemos tu web gratis?</h3>
-            <p class="mb-8 opacity-70">Te decimos qué errores estás cometiendo y cómo solucionarlos hoy mismo.</p>
-            <a href="index.html" class="inline-block bg-yellow-400 text-dark px-10 py-4 rounded-full font-bold hover:scale-105 transition-transform">Solicitar análisis</a>
-        </div>
+
+        <section class="mt-20 p-12 bg-dark text-cream rounded-[3rem] text-center">
+            <h3 class="text-4xl font-serif font-bold mb-6 text-white">¿Quieres que analicemos tu web gratis?</h3>
+            <p class="text-lg opacity-80 mb-10 max-w-xl mx-auto text-white">Te diremos exactamente dónde estás perdiendo dinero y cómo podemos arreglarlo en menos de una semana.</p>
+            <button onclick="openModal()" class="bg-accent text-dark px-10 py-4 rounded-full font-bold hover:scale-105 transition-transform">Consultar ahora</button>
+        </section>
     </article>
+
+    <!-- Modal (duplicated for functionality) -->
+    <div id="demoModal" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4">
+        <div class="absolute inset-0 bg-dark/60 backdrop-blur-sm" onclick="closeModal()"></div>
+        <div class="relative bg-cream border-2 border-dark w-full max-w-xl rounded-[2.5rem] p-8 md:p-12 overflow-hidden shadow-2xl scale-95 opacity-0 transition-all duration-300" id="modalContent">
+            <button onclick="closeModal()" class="absolute top-6 right-6 text-2xl">×</button>
+            <div id="formSection">
+                <h3 class="text-3xl font-serif font-bold mb-4">Quiero mi demo.</h3>
+                <form onsubmit="handleSubmit(event)" class="space-y-4">
+                    <input type="text" placeholder="Nombre" required class="w-full bg-white border border-dark/10 rounded-xl px-4 py-3 outline-none">
+                    <input type="email" placeholder="Correo" required class="w-full bg-white border border-dark/10 rounded-xl px-4 py-3 outline-none">
+                    <button type="submit" class="w-full bg-dark text-cream py-4 rounded-xl font-bold hover:bg-accent hover:text-dark transition-all">Enviar</button>
+                </form>
+            </div>
+            <div id="successSection" class="hidden text-center py-12">
+                <div class="text-3xl font-serif font-bold">¡Enviado!</div>
+                <p>Contactaremos contigo pronto.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openModal() { document.getElementById('demoModal').classList.remove('hidden'); setTimeout(() => { document.getElementById('modalContent').classList.remove('scale-95', 'opacity-0'); }, 10); }
+        function closeModal() { document.getElementById('modalContent').classList.add('scale-95', 'opacity-0'); setTimeout(() => { document.getElementById('demoModal').classList.add('hidden'); }, 300); }
+        function handleSubmit(e) { e.preventDefault(); document.getElementById('formSection').classList.add('hidden'); document.getElementById('successSection').classList.remove('hidden'); }
+    </script>
 </body>
 </html>

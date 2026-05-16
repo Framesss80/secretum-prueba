@@ -27,7 +27,7 @@
                     colors: {
                         cream: '#F5F5F0',
                         dark: '#0A0A0A',
-                        accent: '#FFD700',
+                        accent: '#E6FF00', // Amarillo fosforescente suave
                     },
                     fontFamily: {
                         serif: ['Cormorant Garamond', 'serif'],
@@ -43,14 +43,35 @@
             position: absolute;
             inset: 0;
             z-index: 0;
-            /* Puntos más gorditos (2.5px) y con mucha más distancia (50px) */
-            background-image: radial-gradient(rgba(10, 10, 10, 0.04) 2.5px, transparent 2.5px);
+            /* Puntos al 7% de opacidad para que se vean un pelín más */
+            background-image: radial-gradient(rgba(10, 10, 10, 0.07) 2.5px, transparent 2.5px);
             background-size: 50px 50px;
             pointer-events: none;
+        }
+
+        /* Mouse Follower */
+        #cursor-follower {
+            width: 20px;
+            height: 20px;
+            background-color: #E6FF00;
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.5;
+            transition: transform 0.1s ease-out;
+            mix-blend-mode: multiply;
+            filter: blur(4px);
+        }
+
+        @media (max-width: 768px) {
+            #cursor-follower { display: none; }
         }
     </style>
 </head>
 <body class="bg-cream text-dark font-sans selection:bg-accent selection:text-dark">
+
+    <div id="cursor-follower"></div>
 
     <!-- Navigation -->
     <nav class="fixed top-0 w-full z-50 bg-cream/80 backdrop-blur-md border-b border-dark/5">
@@ -580,6 +601,13 @@
     </div>
 
     <script>
+        // Cursor Follower
+        const follower = document.getElementById('cursor-follower');
+        document.addEventListener('mousemove', (e) => {
+            follower.style.left = e.clientX + 'px';
+            follower.style.top = e.clientY + 'px';
+        });
+
         function openModal() {
             const modal = document.getElementById('demoModal');
             const content = document.getElementById('modalContent');
