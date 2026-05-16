@@ -6,6 +6,11 @@
     <title>Secretum. | Tu negocio merece una web que no dé vergüenza</title>
     <meta name="description" content="Diseñamos y programamos webs ultrarrápidas a medida. La alternativa profesional y honesta a las plantillas lentas.">
     
+    <!-- SEO & OpenGraph -->
+    <meta property="og:title" content="Secretum. | Webs que no dan vergüenza">
+    <meta property="og:description" content="Agencia de diseño y desarrollo web especializado en rendimiento y conversión.">
+    <meta property="og:type" content="website">
+    
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -49,18 +54,23 @@
                 <a href="#servicios" class="hover:opacity-60 transition-opacity">Servicios</a>
                 <a href="#metodo" class="hover:opacity-60 transition-opacity">Método</a>
                 <a href="#proyectos" class="hover:opacity-60 transition-opacity">Proyectos</a>
+                <a href="#nosotros" class="hover:opacity-60 transition-opacity">Nosotros</a>
+                <a href="#blog" class="hover:opacity-60 transition-opacity">Blog</a>
             </div>
             
-            <a href="https://wa.me/34600000000" class="bg-dark text-cream px-6 py-2.5 rounded-full text-sm font-bold hover:scale-105 transition-transform">
+            <button onclick="openModal()" class="bg-dark text-cream px-6 py-2.5 rounded-full text-sm font-bold hover:scale-105 transition-transform">
                 Pide tu web
-            </a>
+            </button>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="pt-32 pb-20 px-6">
-        <div class="max-w-4xl mx-auto text-center">
-            <div class="inline-block border border-dark rounded-full px-4 py-1 mb-8 text-sm font-medium">
+    <section class="relative pt-32 pb-20 px-6 overflow-hidden">
+        <!-- Dot Pattern Background -->
+        <div class="absolute inset-0 z-0 opacity-[0.03]" style="background-image: radial-gradient(var(--dark) 1.5px, transparent 1.5px); background-size: 24px 24px;"></div>
+        
+        <div class="relative z-10 max-w-4xl mx-auto text-center">
+            <div class="inline-block border border-dark rounded-full px-4 py-1 mb-8 text-sm font-medium bg-white/50">
                 ¡Adiós a las plantillas! ⬇️
             </div>
             
@@ -79,17 +89,10 @@
             </p>
             
             <div class="flex flex-col items-center gap-4">
-                <button class="bg-dark text-cream px-10 py-4 rounded-full text-lg font-bold hover:scale-105 transition-transform shadow-xl">
+                <button onclick="openModal()" class="bg-dark text-cream px-10 py-4 rounded-full text-lg font-bold hover:scale-105 transition-transform shadow-xl">
                     Quiero mi demo
                 </button>
                 <span class="text-xs text-dark/50 italic">* Sin tarjeta. Sin compromiso.</span>
-            </div>
-            
-            <div class="mt-16 flex justify-center">
-                <div class="inline-flex items-center gap-3 bg-white border border-dark rounded-full px-4 py-2 text-sm font-medium">
-                    <span>¡Vuela de rápido!</span>
-                    <img src="images/char_dental.png" alt="Icon" class="w-8 h-8 rounded-full border border-dark/10">
-                </div>
             </div>
         </div>
     </section>
@@ -199,8 +202,69 @@
         </div>
     </section>
 
+    <!-- Nosotros Section -->
+    <section id="nosotros" class="py-24 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <div class="inline-block border border-dark rounded-full px-4 py-1 mb-6 text-xs font-bold">Conócenos</div>
+                <h2 class="text-5xl md:text-7xl font-serif font-bold mb-6">Hola, somos <span class="relative inline-block">Gerard y Eduard.<svg class="absolute -bottom-2 left-0 w-full" viewBox="0 0 300 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 5C50 2 250 2 295 5" stroke="#FFD700" stroke-width="4" stroke-linecap="round"/></svg></span></h2>
+                <p class="max-w-3xl mx-auto text-dark/70 leading-relaxed text-lg">
+                    Somos diseñadores web, especialistas en marketing digital e Inteligencia Artificial. Y te somos sinceros: nos encanta trabajar con PYMES. Secretum Agency nace porque vimos a demasiadas empresas locales atrapadas en webs del 2010, pagando cuotas abusivas a agencias tradicionales que venden mucho humo. Nosotros unimos diseño premium, IA y marketing para que tu web no sea un gasto, sino tu mejor comercial trabajando 24/7.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8 mb-20">
+                <div class="bg-white border-2 border-dark rounded-3xl p-8 flex items-center gap-6">
+                    <img src="images/char_dental.png" alt="Gerard M." class="w-20 h-20 rounded-full border-2 border-dark/10">
+                    <div>
+                        <h4 class="text-2xl font-bold font-serif">Gerard M.</h4>
+                        <p class="text-dark/40 font-bold text-xs uppercase tracking-widest">Co-Founder</p>
+                    </div>
+                </div>
+                <div class="bg-white border-2 border-dark rounded-3xl p-8 flex items-center gap-6">
+                    <img src="images/char_transport.png" alt="Eduard V." class="w-20 h-20 rounded-full border-2 border-dark/10">
+                    <div>
+                        <h4 class="text-2xl font-bold font-serif">Eduard V.</h4>
+                        <p class="text-dark/40 font-bold text-xs uppercase tracking-widest">Co-Founder</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Manifiesto -->
+            <div class="max-w-3xl mx-auto bg-white border-2 border-dark rounded-[2.5rem] p-10 md:p-16">
+                <h3 class="text-3xl font-serif font-bold mb-10 text-center uppercase tracking-tighter">Nuestro Manifiesto</h3>
+                <ul class="space-y-6">
+                    <li class="flex items-start gap-4">
+                        <span class="text-red-500 font-bold">✘</span>
+                        <p class="font-medium">No te vendemos una plantilla a precio de oro.</p>
+                    </li>
+                    <li class="flex items-start gap-4">
+                        <span class="text-red-500 font-bold">✘</span>
+                        <p class="font-medium">No desaparecemos cuando nos necesitas.</p>
+                    </li>
+                    <li class="flex items-start gap-4">
+                        <span class="text-red-500 font-bold">✘</span>
+                        <p class="font-medium">No secuestramos tu dominio. Eres el dueño.</p>
+                    </li>
+                    <li class="flex items-start gap-4">
+                        <span class="text-green-600 font-bold">✔</span>
+                        <p class="font-medium">Código hecho a mano que vuela.</p>
+                    </li>
+                    <li class="flex items-start gap-4">
+                        <span class="text-green-600 font-bold">✔</span>
+                        <p class="font-medium">Webs pensadas para vender, no solo adornar.</p>
+                    </li>
+                    <li class="flex items-start gap-4">
+                        <span class="text-green-600 font-bold">✔</span>
+                        <p class="font-medium">Transparencia total. Somos tu partner.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
     <!-- Projects Section -->
-    <section id="proyectos" class="py-24 px-6">
+    <section id="proyectos" class="py-24 px-6 bg-white/50">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16">
                 <div class="inline-block border border-dark rounded-full px-4 py-1 mb-6 text-xs font-bold">Hechos con cariño</div>
@@ -253,6 +317,46 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="py-24 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+                <div>
+                    <div class="inline-block border border-dark rounded-full px-4 py-1 mb-6 text-xs font-bold uppercase tracking-wider">Aprende con nosotros</div>
+                    <h2 class="text-5xl font-serif font-bold">El Blog de Secretum.</h2>
+                </div>
+                <a href="#" class="text-sm font-bold border-b-2 border-accent pb-1 hover:opacity-60 transition-opacity">Ver todos los artículos →</a>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <article class="group cursor-pointer">
+                    <div class="aspect-video bg-dark/5 rounded-3xl mb-6 overflow-hidden border border-dark/5">
+                        <div class="w-full h-full bg-accent/20 group-hover:scale-105 transition-transform duration-500"></div>
+                    </div>
+                    <p class="text-xs font-bold text-accent uppercase mb-3">Diseño Web</p>
+                    <h3 class="text-2xl font-serif font-bold mb-4 group-hover:text-dark/60">¿Por qué tu web no está vendiendo nada?</h3>
+                    <p class="text-sm text-dark/60 leading-relaxed">Descubre los 3 errores críticos que alejan a tus clientes potenciales antes de que lean tu oferta.</p>
+                </article>
+                <article class="group cursor-pointer">
+                    <div class="aspect-video bg-dark/5 rounded-3xl mb-6 overflow-hidden border border-dark/5">
+                        <div class="w-full h-full bg-blue-100 group-hover:scale-105 transition-transform duration-500"></div>
+                    </div>
+                    <p class="text-xs font-bold text-accent uppercase mb-3">Rendimiento</p>
+                    <h3 class="text-2xl font-serif font-bold mb-4 group-hover:text-dark/60">El impacto de la IA en los negocios locales</h3>
+                    <p class="text-sm text-dark/60 leading-relaxed">Cómo estamos usando la IA para que pequeñas empresas compitan con los gigantes del sector.</p>
+                </article>
+                <article class="group cursor-pointer">
+                    <div class="aspect-video bg-dark/5 rounded-3xl mb-6 overflow-hidden border border-dark/5">
+                        <div class="w-full h-full bg-green-100 group-hover:scale-105 transition-transform duration-500"></div>
+                    </div>
+                    <p class="text-xs font-bold text-accent uppercase mb-3">Secretos</p>
+                    <h3 class="text-2xl font-serif font-bold mb-4 group-hover:text-dark/60">Velocidad de carga: El factor olvidado</h3>
+                    <p class="text-sm text-dark/60 leading-relaxed">Te explicamos por qué cada milisegundo de retraso te está costando dinero real cada mes.</p>
+                </article>
             </div>
         </div>
     </section>
@@ -313,7 +417,7 @@
                 <p class="text-xl text-cream/70 mb-12 max-w-xl mx-auto">
                     Te montamos una demo gratis en pocas horas. Si te gusta, hablamos. Si no, no pasa nada.
                 </p>
-                <button class="bg-accent text-dark px-10 py-5 rounded-full text-xl font-bold hover:scale-105 transition-transform shadow-2xl">
+                <button onclick="openModal()" class="bg-accent text-dark px-10 py-5 rounded-full text-xl font-bold hover:scale-105 transition-transform shadow-2xl">
                     Pedir mi demo gratis →
                 </button>
                 <div class="mt-8 flex justify-center gap-8 text-xs text-cream/40 italic">
@@ -349,10 +453,10 @@
             <div>
                 <h4 class="font-bold mb-6 text-xs uppercase tracking-widest opacity-40">Navegación</h4>
                 <ul class="space-y-4 text-sm font-medium">
-                    <li><a href="#" class="hover:opacity-60">Servicios</a></li>
-                    <li><a href="#" class="hover:opacity-60">Método</a></li>
-                    <li><a href="#" class="hover:opacity-60">Proyectos</a></li>
-                    <li><a href="#" class="hover:opacity-60">Nosotros</a></li>
+                    <li><a href="#servicios" class="hover:opacity-60">Servicios</a></li>
+                    <li><a href="#metodo" class="hover:opacity-60">Método</a></li>
+                    <li><a href="#proyectos" class="hover:opacity-60">Proyectos</a></li>
+                    <li><a href="#nosotros" class="hover:opacity-60">Nosotros</a></li>
                 </ul>
             </div>
             
@@ -368,9 +472,9 @@
             <div>
                 <h4 class="font-bold mb-6 text-xs uppercase tracking-widest opacity-40">Legal</h4>
                 <ul class="space-y-4 text-sm font-medium">
-                    <li><a href="#" class="hover:opacity-60">Privacidad</a></li>
-                    <li><a href="#" class="hover:opacity-60">Cookies</a></li>
-                    <li><a href="#" class="hover:opacity-60">Aviso Legal</a></li>
+                    <li><a href="privacidad.html" class="hover:opacity-60">Privacidad</a></li>
+                    <li><a href="cookies.html" class="hover:opacity-60">Cookies</a></li>
+                    <li><a href="aviso-legal.html" class="hover:opacity-60">Aviso Legal</a></li>
                     <li><a href="#" class="hover:opacity-60">Términos</a></li>
                 </ul>
             </div>
@@ -382,20 +486,130 @@
         </div>
     </footer>
 
+    <!-- Form Modal -->
+    <div id="demoModal" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4">
+        <div class="absolute inset-0 bg-dark/60 backdrop-blur-sm" onclick="closeModal()"></div>
+        <div class="relative bg-cream border-2 border-dark w-full max-w-xl rounded-[2.5rem] p-8 md:p-12 overflow-hidden shadow-2xl scale-95 opacity-0 transition-all duration-300" id="modalContent">
+            <button onclick="closeModal()" class="absolute top-6 right-6 text-2xl hover:rotate-90 transition-transform">×</button>
+            
+            <div id="formSection">
+                <h3 class="text-3xl md:text-4xl font-serif font-bold mb-4">Quiero mi demo.</h3>
+                <p class="text-dark/60 mb-8 text-sm">Rellena este mini formulario y nos ponemos manos a la obra con tu nueva web.</p>
+                
+                <form id="demoForm" class="space-y-4" onsubmit="handleSubmit(event)">
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="space-y-1">
+                            <label class="text-[10px] font-bold uppercase opacity-40">Nombre y Apellidos</label>
+                            <input type="text" required class="w-full bg-white border border-dark/10 rounded-xl px-4 py-3 text-sm focus:border-accent outline-none">
+                        </div>
+                        <div class="space-y-1">
+                            <label class="text-[10px] font-bold uppercase opacity-40">Nombre de tu empresa</label>
+                            <input type="text" required class="w-full bg-white border border-dark/10 rounded-xl px-4 py-3 text-sm focus:border-accent outline-none">
+                        </div>
+                    </div>
+                    <div class="space-y-1">
+                        <label class="text-[10px] font-bold uppercase opacity-40">Sector de la empresa</label>
+                        <input type="text" required class="w-full bg-white border border-dark/10 rounded-xl px-4 py-3 text-sm focus:border-accent outline-none">
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="space-y-1">
+                            <label class="text-[10px] font-bold uppercase opacity-40">Teléfono de contacto</label>
+                            <input type="tel" required class="w-full bg-white border border-dark/10 rounded-xl px-4 py-3 text-sm focus:border-accent outline-none">
+                        </div>
+                        <div class="space-y-1">
+                            <label class="text-[10px] font-bold uppercase opacity-40">Correo electrónico</label>
+                            <input type="email" required class="w-full bg-white border border-dark/10 rounded-xl px-4 py-3 text-sm focus:border-accent outline-none">
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="w-full bg-dark text-cream py-4 rounded-xl font-bold hover:bg-accent hover:text-dark transition-all mt-4">
+                        Enviar solicitud →
+                    </button>
+                    
+                    <p class="text-[10px] text-dark/40 text-center italic mt-4">
+                        Al enviar aceptas nuestra política de privacidad.
+                    </p>
+                </form>
+            </div>
+            
+            <div id="successSection" class="hidden text-center py-12">
+                <div class="w-20 h-20 bg-accent rounded-full flex items-center justify-center mx-auto mb-6 text-3xl">✓</div>
+                <h3 class="text-3xl font-serif font-bold mb-4">¡Enviado!</h3>
+                <p class="text-dark/60">En menos de 24h contactaremos contigo para empezar a diseñar tu demo gratuita.</p>
+                <button onclick="closeModal()" class="mt-8 text-sm font-bold border-b-2 border-dark pb-1">Cerrar ventana</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cookie Banner -->
+    <div id="cookieBanner" class="fixed bottom-6 right-6 z-[150] w-[calc(100%-3rem)] md:w-96 bg-white border-2 border-dark rounded-3xl p-6 shadow-2xl translate-y-20 opacity-0 transition-all duration-500">
+        <div class="flex items-start gap-4">
+            <div class="text-3xl">🍪</div>
+            <div>
+                <h4 class="font-bold mb-2">Aviso de galletas</h4>
+                <p class="text-xs text-dark/60 leading-relaxed mb-4">
+                    Usamos cookies para que tu experiencia en Secretum sea tan rápida como nuestras webs. ¿Te parece bien?
+                </p>
+                <div class="flex gap-3">
+                    <button onclick="acceptCookies()" class="bg-dark text-cream text-[10px] font-bold uppercase tracking-widest px-4 py-2 rounded-lg hover:bg-accent hover:text-dark transition-colors">Aceptar</button>
+                    <a href="cookies.html" class="text-[10px] font-bold uppercase tracking-widest px-4 py-2 opacity-40 hover:opacity-100 transition-opacity">Ver más</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script>
+        // Modal Logic
+        function openModal() {
+            const modal = document.getElementById('demoModal');
+            const content = document.getElementById('modalContent');
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                content.classList.remove('scale-95', 'opacity-0');
+            }, 10);
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('demoModal');
+            const content = document.getElementById('modalContent');
+            content.classList.add('scale-95', 'opacity-0');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                // Reset form state
+                document.getElementById('formSection').classList.remove('hidden');
+                document.getElementById('successSection').classList.add('hidden');
+            }, 300);
+        }
+
+        function handleSubmit(e) {
+            e.preventDefault();
+            document.getElementById('formSection').classList.add('hidden');
+            document.getElementById('successSection').classList.remove('hidden');
+        }
+
+        // Cookie Logic
+        window.addEventListener('load', () => {
+            if (!localStorage.getItem('cookiesAccepted')) {
+                setTimeout(() => {
+                    const banner = document.getElementById('cookieBanner');
+                    banner.classList.remove('translate-y-20', 'opacity-0');
+                }, 1500);
+            }
+        });
+
+        function acceptCookies() {
+            const banner = document.getElementById('cookieBanner');
+            banner.classList.add('translate-y-20', 'opacity-0');
+            localStorage.setItem('cookiesAccepted', 'true');
+            setTimeout(() => banner.style.display = 'none', 500);
+        }
+
+        // FAQ Toggle
         function toggleFaq(btn) {
             const content = btn.nextElementSibling;
             const span = btn.querySelector('span');
-            
-            // Close other FAQs
-            document.querySelectorAll('.faq-item div').forEach(div => {
-                if (div !== content) div.classList.add('hidden');
-            });
-            document.querySelectorAll('.faq-item span').forEach(s => {
-                if (s !== span) s.innerText = '+';
-            });
-            
-            // Toggle current
+            document.querySelectorAll('.faq-item div').forEach(div => { if (div !== content) div.classList.add('hidden'); });
+            document.querySelectorAll('.faq-item span').forEach(s => { if (s !== span) s.innerText = '+'; });
             if (content.classList.contains('hidden')) {
                 content.classList.remove('hidden');
                 span.innerText = '×';

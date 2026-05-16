@@ -1,4 +1,4 @@
-/* Custom Styles for Secretum */
+/* Custom Styles for Secretum v2 */
 
 :root {
     --cream: #F5F5F0;
@@ -18,7 +18,7 @@ body {
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
-    width: 8px;
+    width: 10px;
 }
 
 ::-webkit-scrollbar-track {
@@ -28,22 +28,23 @@ body {
 ::-webkit-scrollbar-thumb {
     background: #DDDDCF;
     border-radius: 10px;
+    border: 3px solid var(--cream);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #CCCCBE;
+    background: var(--dark);
 }
 
-/* Typography Tweaks */
+/* Typography */
 h1, h2, h3, .font-serif {
-    letter-spacing: -0.02em;
+    letter-spacing: -0.03em;
 }
 
 /* Animations */
 @keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(30px);
     }
     to {
         opacity: 1;
@@ -52,30 +53,52 @@ h1, h2, h3, .font-serif {
 }
 
 section {
-    animation: fadeInUp 0.8s ease-out forwards;
+    animation: fadeInUp 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
 }
 
-/* Responsive Grid Adjustments */
+/* Responsive Fixes */
 @media (max-width: 768px) {
     h1 {
-        font-size: 3.5rem !important;
+        font-size: 3.2rem !important;
         line-height: 1.1 !important;
+    }
+    .grid {
+        gap: 1.5rem !important;
     }
 }
 
-/* Special Effects */
+/* FAQ Item Hover */
 .faq-item {
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .faq-item:hover {
-    transform: scale(1.01);
-    box-shadow: 0 10px 30px -10px rgba(0,0,0,0.1);
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px -15px rgba(0,0,0,0.08);
+    border-color: var(--accent);
 }
 
-/* Dot Background for CTA */
-.dot-pattern {
-    background-image: radial-gradient(var(--dark) 1px, transparent 1px);
-    background-size: 20px 20px;
-    opacity: 0.05;
+/* Form Styling */
+input:focus {
+    box-shadow: 0 0 0 4px rgba(255, 215, 0, 0.1);
+}
+
+/* Custom Selection */
+::selection {
+    background-color: var(--accent);
+    color: var(--dark);
+}
+
+/* Optimization for Mobile */
+img {
+    content-visibility: auto;
+}
+
+/* Blog Card Hover */
+article img {
+    transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+article:hover img {
+    transform: scale(1.05);
 }
